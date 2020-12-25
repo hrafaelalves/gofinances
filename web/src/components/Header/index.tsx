@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ size = 'large', menu = 'dashboard' }: H
           Dashboard
         </Link>
         <Link to="/import" className={menu === "import" ? "active" : ""}>
-          Import
+          Importar
         </Link>
       </nav>
     </header>
