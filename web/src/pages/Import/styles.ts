@@ -29,19 +29,19 @@ export const Footer = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  p {
+  p{
     display: flex;
     align-items: center;
     font-size: 12px;
     line-height: 18px;
     color: #969cb3;
 
-    img {
+    img{
       margin-right: 5px;
     }
   }
 
-  button {
+  button{
     background: #ff872c;
     color: #fff;
     border-radius: 5px;
@@ -49,7 +49,7 @@ export const Footer = styled.section`
     border: 0;
     transition: background-color 0.2s;
 
-    &:hover {
+    &:hover{
       background: ${shade(0.2, '#ff872c')};
     }
   }

@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.ul`
   margin-top: 20px;
 
-  li {
+  li{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #444;
 
-    & + li {
+    & + li{
       margin-top: 15px;
     }
   }
@@ -21,7 +21,7 @@ export const FileInfo = styled.div`
   justify-content: space-between;
   flex: 1;
 
-  button {
+  button{
     border: 0;
     background: transparent;
     color: #e83f5b;
@@ -29,12 +29,12 @@ export const FileInfo = styled.div`
     cursor: pointer;
   }
 
-  div {
+  div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    span {
+    span{
       font-size: 12px;
       color: #999;
       margin-top: 5px;

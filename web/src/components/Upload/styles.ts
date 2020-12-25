@@ -1,6 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
-interface UploadProps {
+interface UploadProps{
   isDragActive: boolean;
   isDragReject: boolean;
   refKey?: string;
@@ -17,7 +17,7 @@ const dragReject = css`
 `;
 
 export const DropContainer = styled.div.attrs({
-  className: 'dropzone',
+  className: 'dropzone'
 })`
   border: 1.5px dashed #969cb3;
   border-radius: 5px;
@@ -25,18 +25,17 @@ export const DropContainer = styled.div.attrs({
 
   transition: height 0.2s ease;
 
-  ${(props: UploadProps): false | FlattenSimpleInterpolation =>
-    props.isDragActive && dragActive}
+  ${(props: UploadProps): false | FlattenSimpleInterpolation => props.isDragActive && dragActive}
 
-  ${(props: UploadProps): false | FlattenSimpleInterpolation =>
-    props.isDragReject && dragReject}
+  ${(props: UploadProps): false | FlattenSimpleInterpolation => props.isDragReject && dragReject}
+
 `;
 
-const messageColors = {
+const messageColors ={
   default: '#5636D3',
   error: '#e83f5b',
   success: '#12a454',
-};
+}
 
 export const UploadMessage = styled.p`
   display: flex;

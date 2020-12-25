@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import income from '../../assets/income.svg';
 import outcome from '../../assets/outcome.svg';
@@ -12,9 +12,9 @@ import formatValue from '../../utils/formatValue';
 
 import { Container, CardContainer, Card, TableContainer } from './styles';
 
-interface Transaction {
+interface Transaction{
   id: string;
-  title: string;
+  title:string;
   value: number;
   formattedValue: string;
   formattedDate: string;
@@ -23,19 +23,19 @@ interface Transaction {
   created_at: Date;
 }
 
-interface Balance {
+interface Balance{
   income: string;
   outcome: string;
   total: string;
 }
 
 const Dashboard: React.FC = () => {
-  // const [transactions, setTransactions] = useState<Transaction[]>([]);
-  // const [balance, setBalance] = useState<Balance>({} as Balance);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [balance, setBalance] = useState<Balance>({} as Balance);
 
   useEffect(() => {
-    async function loadTransactions(): Promise<void> {
-      // TODO
+    async function loadTransactions(): Promise<void>{
+
     }
 
     loadTransactions();
@@ -43,29 +43,32 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header menu="dashboard" />
+
       <Container>
         <CardContainer>
           <Card>
             <header>
               <p>Entradas</p>
-              <img src={income} alt="Income" />
+              <img src={income} alt="Income"/>
             </header>
             <h1 data-testid="balance-income">R$ 5.000,00</h1>
           </Card>
+
           <Card>
             <header>
               <p>Saídas</p>
-              <img src={outcome} alt="Outcome" />
+              <img src={outcome} alt="Outcome"/>
             </header>
             <h1 data-testid="balance-outcome">R$ 1.000,00</h1>
           </Card>
+
           <Card total>
             <header>
               <p>Total</p>
-              <img src={total} alt="Total" />
+              <img src={total} alt="Total"/>
             </header>
-            <h1 data-testid="balance-total">R$ 4000,00</h1>
+            <h1 data-testid="balance-total">R$ 4.000,00</h1>
           </Card>
         </CardContainer>
 
@@ -99,6 +102,6 @@ const Dashboard: React.FC = () => {
       </Container>
     </>
   );
-};
+}
 
 export default Dashboard;
